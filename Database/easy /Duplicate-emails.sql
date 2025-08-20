@@ -1,3 +1,4 @@
-Select State FROM Area
-GROUP BY State
-Having COUNT(*) > 1
+SELECT  email
+FROM person
+GROUP BY email
+HAVING COUNT(*) > 1
