@@ -67,3 +67,6 @@ WHERE NOT EXISTS (
     SELECT customerId 
     FROM Orders o
     WHERE c.id = o.customerId);
+
+----------Find-valid-emails----------
+select * from users where email REGEXP '^[A-Za-z0-9_]+@[A-Za-z]+\\.com$';
