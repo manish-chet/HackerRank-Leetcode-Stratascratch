@@ -70,3 +70,10 @@ WHERE NOT EXISTS (
 
 ----------Find-valid-emails----------
 select * from users where email REGEXP '^[A-Za-z0-9_]+@[A-Za-z]+\\.com$';
+
+----------customer-placing-largest-number-of-orders----------
+SELECT customer_number
+FROM Orders
+GROUP BY customer_number
+ORDER BY COUNT(order_number) DESC
+LIMIT 1;
