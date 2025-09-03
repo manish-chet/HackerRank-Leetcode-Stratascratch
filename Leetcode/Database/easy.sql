@@ -95,3 +95,12 @@ WHERE s.sales_id NOT IN (
     JOIN Company c ON o.com_id = c.com_id
     WHERE c.name = 'RED'
 );
+----------biggest-single-number----------
+SELECT (
+    SELECT MAX(num)
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(num) = 1
+    ORDER BY num DESC
+    limit 1
+) AS num;
