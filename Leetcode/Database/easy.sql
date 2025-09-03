@@ -116,3 +116,9 @@ SET sex = CASE
              WHEN sex = 'm' THEN 'f'
              WHEN sex = 'f' THEN 'm'
           END;
+
+---------actors-and-directors-who-have-worked-atleast-3-times----------
+SELECT actor_id, director_id
+FROM ActorDirector
+GROUP BY actor_id, director_id
+HAVING COUNT(*) >= 3;
