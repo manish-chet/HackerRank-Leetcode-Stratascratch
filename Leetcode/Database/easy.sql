@@ -77,3 +77,12 @@ FROM Orders
 GROUP BY customer_number
 ORDER BY COUNT(order_number) DESC
 LIMIT 1;
+----------Big-countries----------
+select name,population,area
+from world
+where (population >= 25000000) or (area >=3000000)
+----------classes-with-atleast-5-students----------
+SELECT class
+FROM Courses
+GROUP BY class
+HAVING COUNT(student) >= 5;
