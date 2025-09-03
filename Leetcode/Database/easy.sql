@@ -104,3 +104,8 @@ SELECT (
     ORDER BY num DESC
     limit 1
 ) AS num;
+----------not-boring-movies----------
+select * 
+from cinema
+where (id%2)!=0 and description!='boring'
+order by rating desc
