@@ -109,3 +109,10 @@ select *
 from cinema
 where (id%2)!=0 and description!='boring'
 order by rating desc
+
+----------swap-salary----------
+UPDATE Salary
+SET sex = CASE 
+             WHEN sex = 'm' THEN 'f'
+             WHEN sex = 'f' THEN 'm'
+          END;
